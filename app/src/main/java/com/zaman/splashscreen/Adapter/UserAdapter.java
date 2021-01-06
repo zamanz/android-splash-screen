@@ -13,7 +13,7 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 
 import com.zaman.splashscreen.Model.User;
-import com.zaman.splashscreen.ProfileActivity;
+import com.zaman.splashscreen.UserProfileActivity;
 import com.zaman.splashscreen.R;
 
 import java.util.List;
@@ -43,7 +43,7 @@ public class UserAdapter extends ArrayAdapter<User> {
             @Override
             public void onClick(View v) {
                 //start Activity User Form
-                Intent intent = new Intent(context, ProfileActivity.class);
+                Intent intent = new Intent(context, UserProfileActivity.class);
                 intent.putExtra("user_id", String.valueOf(users.get(position).getId()));
                 Toast.makeText(context,String.valueOf(users.get(position).getName()),Toast.LENGTH_LONG).show();
                 context.startActivity(intent);

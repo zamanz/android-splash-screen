@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Splash Screen</string>
+    <string name="app_name">Hello World</string>
     <string name="android_name">Android Name</string>
     <string name="android_version">Android Version</string>
     <string name="todo">TODO</string>

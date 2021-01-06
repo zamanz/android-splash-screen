@@ -23,7 +23,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class HomeActivity extends AppCompatActivity {
+public class UserActivity extends AppCompatActivity {
 
     ListView listView;
     Button load_products;
@@ -31,9 +31,8 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_user);
         setTitle("Retrofit CRUD");
-
         listView = findViewById(R.id.listView);
         load_products = findViewById(R.id.load_products);
         load_products.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +40,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),ProductsActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
